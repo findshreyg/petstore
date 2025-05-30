@@ -80,6 +80,7 @@ npm start
 3. Configure the build settings.
 4. Deploy — your app will be hosted at a custom Amplify domain.
 
+[Live Link](http://petstore-frontend.s3-website.us-east-2.amazonaws.com/)   
 ---
 
 ## 🤝 Contributing
