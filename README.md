@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# 🐾 PetStore – Full Stack Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+PetStore is a responsive full-stack e-commerce application for managing pet-related products and services. It is built using **React.js**, styled with **Figma**, and powered by **AWS Amplify** for backend services like authentication, GraphQL APIs, and cloud hosting.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- 🛒 Browse and purchase pet supplies
+- 🔐 User authentication with AWS Cognito
+- 📦 Manage product inventory via a connected API
+- 📊 Admin interface to manage product listings
+- ☁️ Hosted on AWS using Amplify Studio
+- 💅 UI design integrated from Figma
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+- **Frontend**: React.js
+- **Backend**: AWS Amplify (GraphQL, Cognito)
+- **Design**: Figma
+- **Hosting**: AWS Amplify
+- **State Management**: React Context / Local Storage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📁 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+PetStore-main/
+├── petstore/
+│   ├── amplify/                   # AWS Amplify backend configuration
+│   ├── public/                    # Static assets
+│   ├── src/                       # React source code
+│   ├── package.json               # Project dependencies
+│   └── README.md                  # App-specific documentation
+└── README.md                      # Root project overview (this file)
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🧑‍💻 Getting Started
 
-### `npm run eject`
+### 1. Clone the Repository
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/yourusername/PetStore.git
+cd PetStore-main/petstore
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Install Dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 3. Configure Amplify
 
-## Learn More
+Make sure you have the [AWS Amplify CLI](https://docs.amplify.aws/cli/start/install/) installed:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+amplify pull
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This will sync the backend environment from the cloud.
 
-### Code Splitting
+### 4. Run the App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🌐 Deployment (via AWS Amplify)
 
-### Making a Progressive Web App
+1. Commit your changes to GitHub.
+2. Connect the repo to [AWS Amplify Hosting](https://console.aws.amazon.com/amplify/).
+3. Configure the build settings.
+4. Deploy — your app will be hosted at a custom Amplify domain.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Contributions are welcome! If you'd like to add features, improve UI, or report bugs, feel free to open an issue or pull request.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📄 License
 
-### `npm run build` fails to minify
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 👨‍🎨 Acknowledgments
+
+- [AWS Amplify Studio](https://aws.amazon.com/amplify/studio/)
+- [React.js](https://reactjs.org/)
+- [Figma](https://www.figma.com/)
+
+---
