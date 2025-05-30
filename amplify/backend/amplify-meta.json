@@ -1,0 +1,108 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-petstore-staging-c019f-authRole",
+      "UnauthRoleArn": "arn:aws:iam::443929329154:role/amplify-petstore-staging-c019f-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::443929329154:role/amplify-petstore-staging-c019f-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-petstore-staging-c019f-deployment",
+      "UnauthRoleName": "amplify-petstore-staging-c019f-unauthRole",
+      "StackName": "amplify-petstore-staging-c019f",
+      "StackId": "arn:aws:cloudformation:us-east-2:443929329154:stack/amplify-petstore-staging-c019f/5e34c4c0-0357-11f0-bc77-0a411cc7197f",
+      "AmplifyAppId": "dgk1mpjgmefju"
+    }
+  },
+  "api": {
+    "PetStore": {
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "PetStore",
+          "attributes": [
+            "UserPoolId"
+          ]
+        }
+      ],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            },
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authPetStore"
+              }
+            }
+          ],
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            }
+          }
+        },
+        "GraphQLAPIIdOutput": "5ooxrqrgqnfgvksj6jyua7azey",
+        "GraphQLAPIEndpointOutput": "https://lvwzlxdidvafvke72352lmonsu.appsync-api.us-east-2.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-w5dmvzvynjc3xfxew7fj2l62qq"
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync",
+      "lastPushTimeStamp": "2025-03-23T19:35:53.584Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-petstore-staging-c019f-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiPetStore"
+      },
+      "lastPushDirHash": "ZQbD6iNvr0uviOhz8iTNUA031sw="
+    }
+  },
+  "auth": {
+    "PetStore": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ]
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "output": {
+        "UserPoolId": "us-east-2_aAv4W5ab0",
+        "AppClientIDWeb": "6j67da806f85j7mam72v7pk78h",
+        "AppClientID": "5p9hdtg6cp3ctkmrc5tnn9f5lv",
+        "IdentityPoolId": "us-east-2:4efa498e-cd11-4574-8d7f-2d71228c4d50",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-2:443929329154:userpool/us-east-2_aAv4W5ab0",
+        "IdentityPoolName": "testAuthIdentityPool__staging",
+        "UserPoolName": "PetStore"
+      },
+      "lastPushTimeStamp": "2025-03-23T19:35:53.585Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-petstore-staging-c019f-deployment/amplify-cfn-templates/auth/PetStore-cloudformation-template.json",
+        "logicalId": "authPetStore"
+      }
+    }
+  }
+}
